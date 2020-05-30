@@ -94,7 +94,9 @@ You can install "pytest-homeassistant" via `pip`_ from `PyPI`_::
 
 Contributing
 ------------
-Contributions are very welcome.
+Contributions are very welcome.  I only incldued fixtures and test helpers that
+were useful to me when testing my custom components.  If there are others that would
+be useful to you, pull requests are welcome!
 
 License
 -------
