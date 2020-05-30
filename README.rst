@@ -17,8 +17,8 @@ A pytest plugin for use with homeassistant custom components.
 This `pytest`_ plugin provides several pytest fixtures and utils to make testing
 `homeassistant`_ custom components easier.
 
-This plugin pulls a subset of fixtures and helpers from the `homeassistant`_ test code to
-allow you to test your custom components.
+The plugin allows you to use a subset of fixtures and helpers from the
+`homeassistant`_ test code to allow you to test your own custom components.
 
 
 Features
