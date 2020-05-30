@@ -27,11 +27,35 @@ Features
 Fixtures
 ########
 
-* `hass` - Used to mock a hass instance.  This is primarily useful in testing your
+* ``hass`` - Used to mock a hass instance.  This is primarily useful in testing your
   `config_flow` code.  Examples of it's usage can be found in the homeassistant
-  tests. (`example <https://github.com/home-assistant/core/blob/dev/tests/components/hue/test_config_flow.py#L48>`_)
-* `aioclient_mock` - Used to mock responses from `homeassistant.helpers.aiohttp_client.async_get_clientsession`
-  in your test code. (`example test <https://github.com/home-assistant/core/blob/605b0ceb5fd50df938c19758e093c005ba9ddfe8/tests/components/alexa/test_state_report.py#L7>`_)
+  tests.
+
+.. code-block:: python
+
+    from custom_components.steam_wishlist import config_flow
+
+    async def test_flow_init(hass):
+        """Test the initial flow."""
+        result = await hass.config_entries.flow.async_init(
+            config_flow.DOMAIN, context={"source": "user"}
+        )
+
+        expected = {
+            "data_schema": config_flow.DATA_SCHEMA,
+            "description_placeholders": None,
+            "errors": {},
+            "flow_id": mock.ANY,
+            "handler": "steam_wishlist",
+            "step_id": "user",
+            "type": "form",
+        }
+        assert expected == result
+
+* ``aioclient_mock`` - Used to mock responses from `homeassistant.helpers.aiohttp_client.async_get_clientsession`
+  in your test code.
+
+You can find example usage of both of these fixtures in the `homeassistant tests <https://github.com/home-assistant/core/tree/dev/tests>`_.
 
 Helpers
 #######
@@ -41,12 +65,18 @@ Helpers
 
 .. code-block:: python
 
-    from pytest_homeassistant.async_mock import AsyncMock, patch
+    from pytest_homeassistant.async_mock import AsyncMock
+    from custom_components.steam_wishlist import sensor_manager
 
-    async def test_async_thing():
-        with patch("mymodule.get_async_thing") as m_get_async_thing:
-            m_get_async_thing.return_value = AsyncMock()
-            await get_async_thing()
+    async def test_sensormanager_async_register_component(
+        hass, coordinator_mock
+    ):
+    """Test that we add listeners and referesh data if all platforms were registered."""
+    manager = sensor_manager.SensorManager(hass, url="http://fake.com")
+    mock_async_add_entities = AsyncMock()
+    await manager.async_register_component("sensor", mock_async_add_entities)
+
+    assert mock_async_add_entities.called is True
 
 Requirements
 ------------
