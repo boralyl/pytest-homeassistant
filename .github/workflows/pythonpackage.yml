@@ -19,7 +19,6 @@ jobs:
 
       - name: Install dependencies
         run: |
-          python setup.py install
           pip install pre-commit
 
       - name: Lint with flake8
