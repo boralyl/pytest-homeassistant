@@ -10,7 +10,7 @@ pytest-homeassistant
     :target: https://pypi.org/project/pytest-homeassistant
     :alt: Python versions
 
-.. image:: https://img.shields.io/github/workflow/status/boralyl/pytest-homeassistant/Python package
+.. image:: https://img.shields.io/github/workflow/status/boralyl/pytest-homeassistant/Python%20package
     :alt: GitHub Workflow Status
 
 A pytest plugin for use with homeassistant custom components.
