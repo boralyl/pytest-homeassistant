@@ -1,8 +1,7 @@
 """pytest setup."""
 from aioresponses import aioresponses
-import pytest
-
 from homeassistant.exceptions import ServiceNotFound
+import pytest
 
 from .aiohttp_mock import mock_aiohttp_client
 from .async_mock import Mock

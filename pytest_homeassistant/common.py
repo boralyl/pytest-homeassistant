@@ -1,19 +1,18 @@
 import asyncio
+from contextlib import contextmanager
 import functools as ft
 import json
 import logging
 import os
-from contextlib import contextmanager
 
-import homeassistant.util.dt as date_util
-from homeassistant import auth, config_entries, core as ha, loader
+from homeassistant import auth, config_entries, core as ha
 from homeassistant.auth import auth_store
 from homeassistant.const import EVENT_HOMEASSISTANT_CLOSE
 from homeassistant.helpers import storage
+import homeassistant.util.dt as date_util
 from homeassistant.util.unit_system import METRIC_SYSTEM
 
 from .async_mock import AsyncMock, Mock, patch
-
 
 _LOGGER = logging.getLogger(__name__)
 INSTANCES = []

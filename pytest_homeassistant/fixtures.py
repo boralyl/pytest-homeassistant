@@ -1,10 +1,8 @@
 """Fixtures provided by homeassistant.core"""
+from homeassistant.exceptions import ServiceNotFound
 import pytest
 
-from homeassistant.exceptions import ServiceNotFound
-
 from .aiohttp_mock import mock_aiohttp_client
-from .async_mock import Mock
 
 from .common import (  # noqa: E402, isort:skip
     async_test_home_assistant,

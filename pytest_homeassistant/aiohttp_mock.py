@@ -9,9 +9,8 @@ from urllib.parse import parse_qs
 from aiohttp import ClientSession
 from aiohttp.client_exceptions import ClientError, ClientResponseError
 from aiohttp.streams import StreamReader
-from yarl import URL
-
 from homeassistant.const import EVENT_HOMEASSISTANT_CLOSE
+from yarl import URL
 
 RETYPE = type(re.compile(""))
 
