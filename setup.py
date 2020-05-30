@@ -12,9 +12,9 @@ def read(fname):
 
 
 REQUIREMENTS = [
+    "homeassistant",
     "asynctest==0.13.0",
     "astroid==2.3.3",
-    "homeassistant",
     "mock-open==1.4.0",
     "pytest-aiohttp==0.3.0",
     "pytest-timeout==1.3.4",
