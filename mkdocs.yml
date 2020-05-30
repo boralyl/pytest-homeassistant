@@ -1,0 +1,10 @@
+site_name: pytest-homeassistant
+site_description: A pytest plugin for use with homeassistant custom components.
+site_author: Aaron Godfrey
+
+theme: readthedocs
+
+repo_url: https://github.com/boralyl/pytest-homeassistant
+
+pages:
+- Home: index.md
