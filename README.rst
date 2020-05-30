@@ -72,11 +72,11 @@ Helpers
         hass, coordinator_mock
     ):
     """Test that we add listeners and referesh data if all platforms were registered."""
-    manager = sensor_manager.SensorManager(hass, url="http://fake.com")
-    mock_async_add_entities = AsyncMock()
-    await manager.async_register_component("sensor", mock_async_add_entities)
+        manager = sensor_manager.SensorManager(hass, url="http://fake.com")
+        mock_async_add_entities = AsyncMock()
+        await manager.async_register_component("sensor", mock_async_add_entities)
 
-    assert mock_async_add_entities.called is True
+        assert mock_async_add_entities.called is True
 
 Requirements
 ------------
