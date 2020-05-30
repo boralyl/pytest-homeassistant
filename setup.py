@@ -16,7 +16,6 @@ REQUIREMENTS = [
     "astroid==2.3.3",
     "homeassistant",
     "mock-open==1.4.0",
-    "pylint-strict-informational==0.1",
     "pytest-aiohttp==0.3.0",
     "pytest-timeout==1.3.4",
     "pytest==5.4.2",
