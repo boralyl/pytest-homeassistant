@@ -13,15 +13,15 @@ pytest-homeassistant
 .. image:: https://img.shields.io/github/workflow/status/boralyl/pytest-homeassistant/Python%20package
     :alt: GitHub Workflow Status
 
-A pytest plugin for use with homeassistant custom components.
+A pytest plugin for use with Home Assistant custom components.
 
 ----
 
 This `pytest`_ plugin provides several pytest fixtures and utils to make testing
-`homeassistant`_ custom components easier.
+`Home Assistant`_ custom components easier.
 
 The plugin allows you to use a subset of fixtures and helpers from the
-`homeassistant`_ test code to allow you to test your own custom components.
+`Home Assistant`_ test code to allow you to test your own custom components.
 
 
 Features
@@ -31,7 +31,7 @@ Fixtures
 ########
 
 * ``hass`` - Used to mock a hass instance.  This is primarily useful in testing your
-  `config_flow` code.  Examples of it's usage can be found in the homeassistant
+  `config_flow` code.  Examples of it's usage can be found in the Home Assistant
   tests.
 
 .. code-block:: python
@@ -58,7 +58,7 @@ Fixtures
 * ``aioclient_mock`` - Used to mock responses from `homeassistant.helpers.aiohttp_client.async_get_clientsession`
   in your test code.
 
-You can find example usage of both of these fixtures in the `homeassistant tests <https://github.com/home-assistant/core/tree/dev/tests>`_.
+You can find example usage of both of these fixtures in the `Home Assistant tests <https://github.com/home-assistant/core/tree/dev/tests>`_ directory.
 
 Helpers
 #######
@@ -104,7 +104,7 @@ be useful to you, pull requests are welcome!
 License
 -------
 
-Distributed under the terms of the `MIT`_ license, "pytest-homeassistant" is free and open source software
+Distributed under the terms of the `MIT`_ license, "pytest-homeassistant" is free and open source software.
 
 
 Issues
@@ -124,4 +124,4 @@ If you encounter any problems, please `file an issue`_ along with a detailed des
 .. _`tox`: https://tox.readthedocs.io/en/latest/
 .. _`pip`: https://pypi.org/project/pip/
 .. _`PyPI`: https://pypi.org/project
-.. _`homeassistant`: https://github.com/home-assistant/core
+.. _`Home Assistant`: https://github.com/home-assistant/core
