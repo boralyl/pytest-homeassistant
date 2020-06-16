@@ -13,14 +13,14 @@ def read(fname):
 
 REQUIREMENTS = [
     "homeassistant",
-    "asynctest==0.13.0",
-    "astroid==2.3.3",
-    "mock-open==1.4.0",
-    "pytest-aiohttp==0.3.0",
-    "pytest-timeout==1.3.4",
-    "pytest==5.4.2",
-    "requests_mock==1.8.0",
-    "responses==0.10.6",
+    "asynctest>=0.13.0,<0.14.0",
+    "astroid>=2.3.3,<2.5.0",
+    "mock-open>=1.4.0,<2.0.0",
+    "pytest-aiohttp>=0.3.0,<0.4.0",
+    "pytest-timeout>=1.3.4,<2.0.0",
+    "pytest>=5.4.0,<6",
+    "requests_mock>=1.8.0,<2.0.0",
+    "responses>=0.10.6,<0.11.0",
 ]
 
 setup(
