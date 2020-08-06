@@ -1,18 +1,23 @@
 """Fixtures provided by homeassistant.core"""
+import asyncio
+
+from homeassistant import runner
 from homeassistant.exceptions import ServiceNotFound
 import pytest
 
 from .aiohttp_mock import mock_aiohttp_client
 
-from .common import (  # noqa: E402, isort:skip
-    async_test_home_assistant,
-    mock_storage as mock_storage,
-)
+asyncio.set_event_loop_policy(runner.HassEventLoopPolicy(False))
+# Disable fixtures overriding our beautiful policy
+asyncio.set_event_loop_policy = lambda policy: None
 
 
 @pytest.fixture
 def hass_storage():
     """Fixture to mock storage."""
+    # prevents circular dependency
+    from .common import mock_storage
+
     with mock_storage() as stored_data:
         yield stored_data
 
@@ -20,6 +25,8 @@ def hass_storage():
 @pytest.fixture
 def hass(loop, hass_storage, request):
     """Fixture to provide a test instance of Home Assistant."""
+    # prevents circular dependency
+    from .common import async_test_home_assistant
 
     def exc_handle(loop, context):
         """Handle exceptions by rethrowing them, which will fail the test."""
