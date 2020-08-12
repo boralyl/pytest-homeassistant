@@ -25,7 +25,7 @@ REQUIREMENTS = [
 
 setup(
     name="pytest-homeassistant",
-    version="0.1.2",
+    version="0.1.3",
     author="Aaron Godfrey",
     maintainer="Aaron Godfrey",
     license="MIT",
