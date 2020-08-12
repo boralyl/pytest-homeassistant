@@ -18,7 +18,7 @@ REQUIREMENTS = [
     "mock-open>=1.4.0,<2.0.0",
     "pytest-aiohttp>=0.3.0,<0.4.0",
     "pytest-timeout>=1.3.4,<2.0.0",
-    "pytest>=5.4.0,<6",
+    "pytest>=5.4.0,<6.1.0",
     "requests_mock>=1.8.0,<2.0.0",
     "responses>=0.10.6,<0.11.0",
 ]
