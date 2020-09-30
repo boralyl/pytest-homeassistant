@@ -1,8 +1,11 @@
-**This repository has been superceded by `pytest-homeassistant-custom-component`_ by @`MatthewFlamm`_.  Check it out!**
+=============================
+This Repository is Deprecated
+=============================
+This repository has been superceded by `pytest-homeassistant-custom-component`_ by `@MatthewFlamm`_.  Check it out!
 
-====================
+--------------------
 pytest-homeassistant
-====================
+--------------------
 
 .. image:: https://img.shields.io/pypi/v/pytest-homeassistant.svg
     :target: https://pypi.org/project/pytest-homeassistant
@@ -128,4 +131,4 @@ If you encounter any problems, please `file an issue`_ along with a detailed des
 .. _`PyPI`: https://pypi.org/project
 .. _`Home Assistant`: https://github.com/home-assistant/core
 .. _`pytest-homeassistant-custom-component`: https://github.com/MatthewFlamm/pytest-homeassistant-custom-component
-.. _`MatthewFlamm`: https://github.com/MatthewFlamm
+.. _`@MatthewFlamm`: https://github.com/MatthewFlamm
