@@ -1,4 +1,4 @@
-**This repository has been superceded by `pytest-homeassistant-custom-component_` by @`MatthewFlamm_`.  Check it out!**
+**This repository has been superceded by `pytest-homeassistant-custom-component`_ by @`MatthewFlamm`_.  Check it out!**
 
 ====================
 pytest-homeassistant
