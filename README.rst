@@ -1,3 +1,5 @@
+**This repository has been superceded by `pytest-homeassistant-custom-component_` by @`MatthewFlamm_`.  Check it out!**
+
 ====================
 pytest-homeassistant
 ====================
@@ -125,3 +127,5 @@ If you encounter any problems, please `file an issue`_ along with a detailed des
 .. _`pip`: https://pypi.org/project/pip/
 .. _`PyPI`: https://pypi.org/project
 .. _`Home Assistant`: https://github.com/home-assistant/core
+.. _`pytest-homeassistant-custom-component`: https://github.com/MatthewFlamm/pytest-homeassistant-custom-component
+.. _`MatthewFlamm`: https://github.com/MatthewFlamm
